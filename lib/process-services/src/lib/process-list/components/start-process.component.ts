@@ -97,10 +97,10 @@ export class StartProcessInstanceComponent implements OnChanges, OnInit, OnDestr
     @Output()
     processDefinitionSelection: EventEmitter<ProcessDefinitionRepresentation> = new EventEmitter<ProcessDefinitionRepresentation>();
 
-    @ViewChild('startForm')
+    @ViewChild('startForm', { static: false })
     startForm: StartFormComponent;
 
-    @ViewChild(MatAutocompleteTrigger)
+    @ViewChild(MatAutocompleteTrigger, { static: false })
     inputAutocomplete: MatAutocompleteTrigger;
 
     processDefinitions: ProcessDefinitionRepresentation[] = [];
