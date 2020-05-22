@@ -33,7 +33,7 @@ describe('StartProcessCloudService', () => {
     });
 
     beforeEach(() => {
-        service = TestBed.get(StartProcessCloudService);
+        service = TestBed.inject(StartProcessCloudService);
     });
 
     it('should be able to create a new process', (done) => {
